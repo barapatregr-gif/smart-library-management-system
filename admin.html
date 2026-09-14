@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Panel - Smart Library</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        ⚙️ Smart Library Admin
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="books.html">
+            Books
+        </a>
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <button onclick="logout()"
+                class="logout-btn">
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main class="admin-page">
+
+    <h1>⚙️ Admin Dashboard</h1>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <h3>Total Books</h3>
+
+            <h2 id="adminTotalBooks">
+                0
+            </h2>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Available Books</h3>
+
+            <h2 id="adminAvailableBooks">
+                0
+            </h2>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Issued Books</h3>
+
+            <h2 id="adminIssuedBooks">
+                0
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <section class="admin-section">
+
+        <h2>➕ Add New Book</h2>
+
+        <form id="addBookForm"
+              class="admin-form">
+
+            <input
+                type="text"
+                id="bookTitle"
+                placeholder="Book Title"
+                required
+            >
+
+            <input
+                type="text"
+                id="bookAuthor"
+                placeholder="Author"
+                required
+            >
+
+            <input
+                type="text"
+                id="bookCategory"
+                placeholder="Category"
+                required
+            >
+
+            <input
+                type="number"
+                id="bookYear"
+                placeholder="Publication Year"
+                required
+            >
+
+            <input
+                type="number"
+                id="bookCopies"
+                placeholder="Number of Copies"
+                required
+                min="1"
+            >
+
+            <button type="submit"
+                    class="btn">
+
+                ➕ Add Book
+
+            </button>
+
+        </form>
+
+        <p id="adminMessage"></p>
+
+    </section>
+
+
+    <section class="admin-section">
+
+        <h2>📚 Manage Books</h2>
+
+        <div id="adminBooks"></div>
+
+    </section>
+
+</main>
+
+
+<script src="js/app.js"></script>
+<script src="js/books.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>
